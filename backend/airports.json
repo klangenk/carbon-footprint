@@ -1,0 +1,32 @@
+[
+  {
+    "code": "BER",
+    "name": "Flughafen Berlin Brandenburg",
+    "latitude": 52.364995118778964,
+    "longitude": 13.509811384660292
+  },
+  {
+    "code": "FRA",
+    "name": "Flughafen Frankfurt",
+    "latitude": 50.0390998423941,
+    "longitude": 8.560990048655103
+  },
+  {
+    "code": "MUC",
+    "name": "Flughafen München",
+    "latitude": 48.35597212254105,
+    "longitude": 11.77413967002438
+  },
+  {
+    "code": "DUS",
+    "name": "Flughafen Düsseldorf",
+    "latitude": 51.291170728298766,
+    "longitude": 6.767949912337516
+  },
+  {
+    "code": "HAM",
+    "name": "Flughafen Hamburg",
+    "latitude": 53.6355580112277,
+    "longitude": 9.998070482250522
+  }
+]

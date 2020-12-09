@@ -1,0 +1,18 @@
+.ResultContainer {
+  padding: 20px;
+}
+
+.ResultPaper {
+  padding: 20px;
+  flex: 1;
+  min-height: 600px;
+}
+
+.ResultList {
+  width: 250px;
+}
+
+.ResultListContainer {
+  display: flex;
+  justify-content: center;
+}

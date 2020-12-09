@@ -1,0 +1,11 @@
+.MapContainer {
+  padding: 20px;
+  flex: 1;
+  min-height: 600px;
+}
+
+.Marker {
+  vertical-align: middle;
+  display: inline-flex;
+  transform: translate(-50%, -50%);
+}
