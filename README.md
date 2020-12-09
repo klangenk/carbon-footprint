@@ -17,6 +17,10 @@ $ cd ../frontend
 $ npm i
 ```
 
+The backend needs the environment variable `GO_CLIMATE_API_KEY` (API key for https://api.goclimateneutral.org)
+
+The frontend needs the environment variable `REACT_APP_GOOGLE_API_KEY` (API key for Google Maps)
+
 ## Running the backend
 
 ```bash
@@ -37,7 +41,7 @@ The backend runs on port 3001
 ## Running the frontend
 
 ```bash
-$ cd backend
+$ cd frontend
 
 # development
 $ npm run start
