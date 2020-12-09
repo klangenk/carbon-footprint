@@ -50,4 +50,4 @@ $ npm run start
 $ npm run build
 ```
 
-Open http://localhost:3000 in the browser
+Open http://localhost:3000 for the frontend or http://localhost:3001/api for the api definition

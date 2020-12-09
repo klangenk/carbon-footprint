@@ -12,8 +12,8 @@ async function bootstrap() {
     .setTitle('Carbon Footprint')
     .setDescription(
       `Comparison of carbon footprints between different means of transport based on based on
-      https://www.umweltbundesamt.de/bild/vergleich-der-durchschnittlichen-emissionen-0 and
-      https://api.goclimateneutral.org/docs`,
+      <a href="https://www.umweltbundesamt.de/bild/vergleich-der-durchschnittlichen-emissionen-0">https://www.umweltbundesamt.de/bild/vergleich-der-durchschnittlichen-emissionen-0</a> and
+      <a href="https://api.goclimateneutral.org/docs">https://api.goclimateneutral.org/docs</a>`,
     )
     .setVersion(version)
     .build();
