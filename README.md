@@ -17,9 +17,7 @@ $ cd ../frontend
 $ npm i
 ```
 
-The backend needs the environment variable `GO_CLIMATE_API_KEY` (API key for https://api.goclimateneutral.org)
-
-The frontend needs the environment variable `REACT_APP_GOOGLE_API_KEY` (API key for Google Maps)
+Missing variables in the .env files have to be filled
 
 ## Running the backend
 
