@@ -1,6 +1,15 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from 'axios';
 
+const urlParams = new URLSearchParams(window.location.search);
+
+const jwt = urlParams.get('jwt')
+
+const api = axios.create({
+  baseURL: 'http://localhost:3001/',
+  headers: { Authorization: `Bearer ${jwt}` }
+})
+
 interface Airport {
   code: string
   name: string
@@ -9,6 +18,7 @@ interface Airport {
 }
 
 interface Data {
+  authorized: boolean;
   airports: Airport[];
   footprints: Footprint[];
   setOrigin: (code: string) => void;
@@ -39,18 +49,24 @@ export const DataProvider = ({ children }: Props) => {
   const [destination, setDestination] = useState<string>('')
   const [airports, setAirports] = useState<Airport[]>([])
   const [footprints, setFootprints] = useState<Footprint[]>([])
+  const [authorized, setAuthorized] = useState<boolean>(!!jwt)
   useEffect(() => {
-    axios.get('http://localhost:3001/airports').then(response => setAirports(response.data.airports))
+    api.get('airports')
+      .then(response => setAirports(response.data.airports))
+      .catch(err => setAuthorized(false))
   }, [])
   useEffect(() => {
     if (!origin || !destination) {
       setFootprints([])
       return
     }
-    axios.get('http://localhost:3001/footprints', { params: { origin, destination } }).then(response => setFootprints(response.data.footprints))
+    api.get('footprints', { params: { origin, destination } })
+      .then(response => setFootprints(response.data.footprints))
+      .catch(err => setAuthorized(false))
   }, [origin, destination])
   return (
     <DataContext.Provider value={{
+      authorized,
       airports,
       footprints,
       setOrigin,

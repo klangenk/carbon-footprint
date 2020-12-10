@@ -37,3 +37,5 @@ lerna-debug.log*
 frontend/.eslintcache
 
 frontend/.vscode/
+
+frontend/src/react-app-env.d.ts

@@ -1,4 +1,5 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Query, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { AppService } from './app.service';
 import { Airports, Params } from './interface.dto';
 
@@ -10,6 +11,7 @@ export class AppController {
    * Get carbon footprints of a trip from one airport to another
    */
   @Get('footprints')
+  @UseGuards(AuthGuard('jwt'))
   getFootprints(@Query() query: Params) {
     return this.appService.getFootprints(query);
   }
@@ -18,6 +20,7 @@ export class AppController {
    * Get supported airports
    */
   @Get('airports')
+  @UseGuards(AuthGuard('jwt'))
   getAirports(): Airports {
     return this.appService.getAirports();
   }

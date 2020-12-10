@@ -59,7 +59,7 @@ const Result = () => {
   const { airports, footprints, origin, setOrigin, destination, setDestination } = useData()
   return (
     <Paper className="ResultPaper" elevation={3}>
-      <Typography variant="h4">
+      <Typography variant="h2">
           Reise
       </Typography>
       <Grid className="ResultContainer" container spacing={8} direction="column">

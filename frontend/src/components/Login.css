@@ -1,0 +1,23 @@
+
+.LoginModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoginPaper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.LoginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}

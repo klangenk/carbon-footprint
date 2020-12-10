@@ -9,19 +9,6 @@ html, body, #root {
   overflow-x: hidden
 }
 
-.Container {
-  min-height: calc(100% - 100px);
-  padding: 30px;
-}
-
-@media only screen and (min-width: 992px) {
-  .Container {
-    padding: 50px;
-  }
-  .ResultContainer {
-    padding: 50px;
-  }
-  .ResultPaper {
-    padding: 50px;
-  }
+.ApiLink {
+  padding-bottom: 20px
 }
